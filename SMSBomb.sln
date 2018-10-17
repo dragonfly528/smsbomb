@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSBomb", "SMSBomb\SMSBomb.csproj", "{3E66474A-4790-42B3-9D3B-06757DD3E53F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E66474A-4790-42B3-9D3B-06757DD3E53F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E66474A-4790-42B3-9D3B-06757DD3E53F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E66474A-4790-42B3-9D3B-06757DD3E53F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E66474A-4790-42B3-9D3B-06757DD3E53F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBB03E60-2147-49FF-A18F-6C0A32BAFE84}
+	EndGlobalSection
+EndGlobal
