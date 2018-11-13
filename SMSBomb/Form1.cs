@@ -1,13 +1,8 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+using System.IO;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SMSBomb
@@ -16,6 +11,7 @@ namespace SMSBomb
     {
         private int SendCount = 0;
         private string mobile = string.Empty;
+        private string LogConfig = @"D:\SyncBranchLog.log";
         public Form1()
         {
             InitializeComponent();
@@ -24,7 +20,16 @@ namespace SMSBomb
         private void button1_Click(object sender, EventArgs e)
         {
             timer1.Enabled = true;
-            timer1.Interval = 5000;
+            timer1.Interval = 10000;
+            //Guid? g = null;
+            //var str = g?.ToString() + "3333" + "44444";
+            //MessageBox.Show(str);
+        }
+        public void WriteLog(string content)
+        {
+            StreamWriter sw = File.AppendText(LogConfig);
+            sw.WriteLine(content);
+            sw.Close();
         }
         //中通快递
         private bool SendMessage_ZT()
@@ -45,7 +50,7 @@ namespace SMSBomb
         {
             var jo = new JObject();
             jo.Add("owner_phone", mobile);
-            jo.Add("type",1);
+            jo.Add("type", 1);
             var wc = new WebClient();
             wc.Encoding = System.Text.Encoding.UTF8;
             wc.Headers.Add(HttpRequestHeader.Accept, "json");
@@ -76,7 +81,7 @@ namespace SMSBomb
             var stamp = (DateTime.Now.ToUniversalTime().Ticks - 621355968000000000) / 10000;
             var jo = new JObject();
             jo.Add("sid", "passport");
-            jo.Add("user",mobile);
+            jo.Add("user", mobile);
             var wc = new WebClient();
             wc.Encoding = System.Text.Encoding.UTF8;
             wc.Headers.Add(HttpRequestHeader.Accept, "json");
@@ -91,7 +96,7 @@ namespace SMSBomb
         {
             var jo = new JObject();
             jo.Add("userName", "15836470842");
-            jo.Add("type","01");
+            jo.Add("type", "01");
             jo.Add("channelID", "12034");
             var wc = new WebClient();
             wc.Encoding = System.Text.Encoding.UTF8;
@@ -106,10 +111,11 @@ namespace SMSBomb
         private void timer1_Tick(object sender, EventArgs e)
         {
             //SendMessage_BD();
-            SendMessage_ZT();
+            //SendMessage_ZT();
             //SendMessage_LT();
             //SendMessage_YD();
             //SendMessage_XM();
+            GetResult("http://api.super.com.cn/test/brands/branch/import/by/mongo/4D87CDD4-5296-456B-B22E-B08F0164040D");
         }
         private void CounterAndUpdate()
         {
@@ -121,6 +127,21 @@ namespace SMSBomb
             textBox1.Text = "15090613628";
             //textBox1.Text = "18521565465";
             mobile = textBox1.Text.ToString();
+        }
+        public void GetResult(string url)
+        {
+            if (SendCount <= 75)
+            {
+                WebClient client = new WebClient();
+                var result = Encoding.UTF8.GetString(client.DownloadData(url));
+                WriteLog(result);
+                CounterAndUpdate();
+            }
+            else
+            {
+                timer1.Enabled = false;
+                MessageBox.Show("一百个网点导入完毕！");
+            }
         }
     }
 }
