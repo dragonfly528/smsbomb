@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd6" filename="CustomerServiceInter.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd2" filename="CustomerServiceInter0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?wsdl=wsdl0" filename="CustomerServiceInter.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd5" filename="CustomerServiceInter1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd1" filename="CustomerServiceInter2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd9" filename="CustomerServiceInter3.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://192.168.6.137/u9/services/CustomerServiceInter.ICSService.svc?wsdl" filename="CSServiceStub.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd4" filename="CustomerServiceInter4.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd0" filename="CustomerServiceInter5.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd8" filename="CustomerServiceInter6.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd10" filename="CustomerServiceInter7.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd7" filename="CustomerServiceInter8.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd3" filename="CustomerServiceInter9.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

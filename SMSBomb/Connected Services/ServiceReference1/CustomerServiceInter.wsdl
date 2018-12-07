@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.UFIDA.org" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.UFIDA.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.UFIDA.org/Imports">
+      <xsd:import schemaLocation="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd8" namespace="http://www.UFIDA.org" />
+      <xsd:import schemaLocation="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF" />
+      <xsd:import schemaLocation="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Service" />
+      <xsd:import schemaLocation="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Business" />
+      <xsd:import schemaLocation="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd5" namespace="UFSoft.UBF.Exceptions" />
+      <xsd:import schemaLocation="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Exceptions" />
+      <xsd:import schemaLocation="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Util.Context" />
+      <xsd:import schemaLocation="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CustomerServiceInter.ICSService_Do_InputMessage">
+    <wsdl:part name="parameters" element="tns:Do" />
+  </wsdl:message>
+  <wsdl:message name="CustomerServiceInter.ICSService_Do_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CustomerServiceInter.ICSService_Do_ExceptionBaseFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/UFSoft.UBF" name="detail" element="q1:ExceptionBase" />
+  </wsdl:message>
+  <wsdl:message name="CustomerServiceInter.ICSService_Do_ServiceLostExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Service" name="detail" element="q2:ServiceLostException" />
+  </wsdl:message>
+  <wsdl:message name="CustomerServiceInter.ICSService_Do_ServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Service" name="detail" element="q3:ServiceException" />
+  </wsdl:message>
+  <wsdl:message name="CustomerServiceInter.ICSService_Do_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Service" name="detail" element="q4:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="CustomerServiceInter.ICSService_Do_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/System" name="detail" element="q5:Exception" />
+  </wsdl:message>
+  <wsdl:portType name="CustomerServiceInter.ICSService">
+    <wsdl:operation name="Do">
+      <wsdl:input wsaw:Action="http://www.UFIDA.org/CustomerServiceInter.ICSService/Do" message="tns:CustomerServiceInter.ICSService_Do_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.UFIDA.org/CustomerServiceInter.ICSService/DoResponse" message="tns:CustomerServiceInter.ICSService_Do_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.UFIDA.org/CustomerServiceInter.ICSService/DoExceptionBaseFault" name="ExceptionBaseFault" message="tns:CustomerServiceInter.ICSService_Do_ExceptionBaseFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://www.UFIDA.org/CustomerServiceInter.ICSService/DoServiceLostExceptionFault" name="ServiceLostExceptionFault" message="tns:CustomerServiceInter.ICSService_Do_ServiceLostExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://www.UFIDA.org/CustomerServiceInter.ICSService/DoServiceExceptionFault" name="ServiceExceptionFault" message="tns:CustomerServiceInter.ICSService_Do_ServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://www.UFIDA.org/CustomerServiceInter.ICSService/DoServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:CustomerServiceInter.ICSService_Do_ServiceExceptionDetailFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://www.UFIDA.org/CustomerServiceInter.ICSService/DoExceptionFault" name="ExceptionFault" message="tns:CustomerServiceInter.ICSService_Do_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

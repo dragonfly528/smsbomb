@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2ad03efb-ca81-4456-9fe3-8dd385a6c95f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.6.137/u9/services/CustomerServiceInter.ICSService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CustomerServiceInter.xsd" MetadataType="Schema" ID="ed58fa2c-ef9d-4bcc-9808-70248602da0d" SourceId="1" SourceUrl="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd6" />
+    <MetadataFile FileName="CustomerServiceInter1.xsd" MetadataType="Schema" ID="d2176aa2-2dc7-4b0e-9eb3-004520a371c2" SourceId="1" SourceUrl="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CustomerServiceInter.wsdl" MetadataType="Wsdl" ID="0078ba93-1d8a-48f6-ad85-7aec449dad53" SourceId="1" SourceUrl="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="CustomerServiceInter2.xsd" MetadataType="Schema" ID="504671ee-9292-4afc-9cda-c0eb82494b65" SourceId="1" SourceUrl="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd5" />
+    <MetadataFile FileName="CustomerServiceInter3.xsd" MetadataType="Schema" ID="d67ed83d-0f7c-4b57-b6a6-b8b74bfa8ac0" SourceId="1" SourceUrl="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CustomerServiceInter4.xsd" MetadataType="Schema" ID="9d3deb24-46a1-420c-bd3e-e6c38a84db22" SourceId="1" SourceUrl="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd9" />
+    <MetadataFile FileName="CSServiceStub.wsdl" MetadataType="Wsdl" ID="a6e5a999-0d9f-4dc5-972e-cff39196735f" SourceId="1" SourceUrl="http://192.168.6.137/u9/services/CustomerServiceInter.ICSService.svc?wsdl" />
+    <MetadataFile FileName="CustomerServiceInter5.xsd" MetadataType="Schema" ID="cdb4f1fe-afa3-4699-af42-42a4c82cf0c3" SourceId="1" SourceUrl="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd4" />
+    <MetadataFile FileName="CustomerServiceInter6.xsd" MetadataType="Schema" ID="5ebc3869-b984-4a8c-b8ff-b9aa411bf806" SourceId="1" SourceUrl="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CustomerServiceInter7.xsd" MetadataType="Schema" ID="e51fe566-67f4-47ba-a293-7c2fb3c7a00b" SourceId="1" SourceUrl="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd8" />
+    <MetadataFile FileName="CustomerServiceInter8.xsd" MetadataType="Schema" ID="85e74788-b237-44db-b4a3-0bcca7c1922d" SourceId="1" SourceUrl="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd10" />
+    <MetadataFile FileName="CustomerServiceInter9.xsd" MetadataType="Schema" ID="5a297122-40a1-460e-9903-9c2869e7d635" SourceId="1" SourceUrl="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd7" />
+    <MetadataFile FileName="CustomerServiceInter10.xsd" MetadataType="Schema" ID="f718e51d-1cd1-462a-9584-6f82f2babbad" SourceId="1" SourceUrl="http://u9-testsvr/U9/services/CustomerServiceInter.ICSService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
