@@ -32,5 +32,15 @@ namespace SMSBomb.Properties {
                 return ((string)(this["SMSBomb_U9_CSServiceStub"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-JHUMD5L;Initial Catalog=API_NewDb;User ID=sa;Password=zaqwsx")]
+        public string API_NewDbConnectionString {
+            get {
+                return ((string)(this["API_NewDbConnectionString"]));
+            }
+        }
     }
 }

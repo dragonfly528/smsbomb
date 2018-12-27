@@ -1,12 +1,44 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Text;
 using System.Windows.Forms;
 
 namespace SMSBomb
 {
+    /// <summary>
+    /// u9 dto
+    /// </summary>
+    public class U9Dto
+    {
+        /// <summary>
+        /// 料号
+        /// </summary>
+        public string product_code { set; get; }
+        /// <summary>
+        /// 名称
+        /// </summary>
+        public string product_name { set; get; }
+        /// <summary>
+        /// 产品型号名称
+        /// </summary>
+        public string product_model { set; get; }
+        /// <summary>
+        /// U9上次更新时间
+        /// </summary>
+        public string LastUpdateDate { set; get; }
+        /// <summary>
+        /// 是否已同步
+        /// </summary>
+        public bool? IsHasSync { set; get; }
+        /// <summary>
+        /// 是否存在更新
+        /// </summary>
+        public bool? IsExistUpdate { set; get; }
+    }
     public partial class Form1 : Form
     {
         private int SendCount = 0;
@@ -24,6 +56,53 @@ namespace SMSBomb
             //Guid? g = null;
             //var str = g?.ToString() + "3333" + "44444";
             //MessageBox.Show(str);
+            //var testStr = "{\"U9MessageNO\":\"CSI:CSC001:2018-12-08日16-41-07:943\",\"JsonNO\":\"\",\"TransCode\":\"CSC001\",\"TranTime\":\"16:41\",\"RetCode\":\"200\",\"RetMsg\":\"成功!\",\"PageCount\":1,\"CurrPage\":1,\"JsonStr\":\"[{\\\"product_id\\\":\\\"1001809243238754\\\",\\\"rownum\\\":\\\"1\\\",\\\"product_code\\\":\\\"1260400061\\\",\\\"product_name\\\":\\\"冷柜 BE1-260-A00A1-AA1A0-HM91 Y09 A02 中国 8E8003\\\",\\\"product_model\\\":\\\"BC/BD-260EG2和谐金\\\",\\\"LastUpdateDate\\\":\\\"2018-05-08\\\"}]\"}";
+            //var json = JObject.Parse(testStr);
+            //var productmodelList = json["JsonStr"];
+            //var dtoList = JsonConvert.DeserializeObject<List<U9Dto>>(productmodelList.ToString());
+            //try
+            //{
+            //    string str = null;
+            //    if (str.Equals(null))//str 为null 报错！
+            //    {
+            //        MessageBox.Show("null");
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("not null");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.ToString());
+            //}
+            //var ja = new JArray();
+            //ja.Add("Name");
+            //ja.Add("Name2");
+            //var result = new JObject();
+            //result.Add("ModelNames",ja);
+            //var xml = XML_Json_Helper.Json2XML(result.ToString());
+
+            var list = new List<Peopele>();
+            for (int i = 0; i <= 1; i++)
+            {
+                var p = new Peopele();
+                p.Name = i.ToString();
+                p.Age = 25 + i;
+                p.IsTest = false;
+                list.Add(p);
+            }
+            foreach (var l in list)
+            {
+                MessageBox.Show(l.Age.ToString());
+            }
+            list.Where(l => l.Age == 25).ToList().ForEach(k => k.Name = "我的年龄是25岁");
+            list.ForEach(xx => xx.Age = 324);
+            foreach (var l in list)
+            {
+                MessageBox.Show(l.Age.ToString());
+            }
+            var x = list.Select(l => new {x= l.Name, y=l.Age }).ToList();
         }
         public void WriteLog(string content)
         {
